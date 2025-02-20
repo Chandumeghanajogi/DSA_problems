@@ -28,7 +28,30 @@ def merge(arr):
          k+=1
         #  j+=1
         #  k+=1
-      return arr
+      
+   
+def binary(arr,target):
+   low=0
+   high=len(arr)-1
+   
+   while low<=high:
+      mid=(low+high)//2
+      if arr[mid]==target:
+         return mid
+      if arr[mid]<target:
+         low=mid+1
+      else:
+         high=mid-1
+   return -1
 
-arr=[20,60000,20,1,3,500,302,2]
-print(merge(arr))
+
+arr=[60000,20,1,3,500,302,2]
+merge(arr)
+print(arr)
+
+result=binary(arr,500)
+if result!=-1:
+   print(f"target is at {result}")
+else:
+   print("not found ")
+
