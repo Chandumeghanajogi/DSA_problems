@@ -1,13 +1,14 @@
-# def rotation_linear(arr):
-#     min=0
-#     for i in range(len(arr)):
-#         if arr[i]<arr[min]:
-#             min=i
-#     return min
+#using the linear search:
+def rotation_linear(arr):
+    min=0
+    for i in range(len(arr)):
+        if arr[i]<arr[min]:
+            min=i
+    return min
 
 
-# arr1=list(map(int,input().split()))
-# print(rotation_linear(arr1))
+arr1=list(map(int,input().split()))
+print(rotation_linear(arr1))
 
 
 # using the binary search
