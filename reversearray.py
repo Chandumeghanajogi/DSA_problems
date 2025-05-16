@@ -26,4 +26,9 @@ def second(arr):
 
 nums=[10,20,200,100,1]
 print(second(nums))
+
+
+# problem 1:
+
+
             
