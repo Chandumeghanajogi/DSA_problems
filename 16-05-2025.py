@@ -175,6 +175,51 @@ n=[12,23,13,0,1,3]
 print(sort(n))
 
 
+def fib(n):
+    if n<2:
+        return n
+    return fib(n-1)+fib(n-2)
+n=6
+print(fib(n-1))
+
+# Abundant Number
+# A Number that is smaller than the sum of all it's factors except the number itself is known as an Abundant number.
+# Let's try and understand the concept better using an example
+
+# Example
+# Input : Number = 12
+# Output : Yes, It's an Abundant Number
+# Explanation : The Factors for the number 12 are, 1, 2, 3, 4 and 6. We don't want to include the number itself.
+# Now the sum of the factors except the number itself is :
+# 1 + 2 + 3 + 4 + 6 = 16
+# as the number 16>12 , the number itself.
+# It's an abundant number.
+
+def abu(n):
+    sum1=0
+    n1=n
+    for i in range(1,n):
+        if n%i==0:
+            sum1+=i
+    if sum1>n1:
+        return True
+    return False
+
+print(abu(16))
+
+def co(n,factors):
+    for i in range(1,n):
+        if n%i==0:
+            factors.append(i)
+
+    return factors
+
+n=12
+print(co(12,[]))
+    
+        
+
+
 
 
 
