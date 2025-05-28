@@ -28,10 +28,8 @@
 # s consists only of printable ASCII characters.
 
 def palin(s):
-    # c="".join(char.lower() for char in s if char.isalnum())
-    for char in s:
-        if char.isalpha():
-
-             return "".join(s.isalnum())
-s="CHANDu"
+    c="".join(char.lower() for char in s if char.isalpha())
+    print(c)
+    
+s="CHANDu111"
 palin(s)
