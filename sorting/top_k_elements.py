@@ -12,3 +12,17 @@ k=2
 object=Chandu()
 print(object.top_k_elements(k,nums))
             
+a={1:2,2:3}
+b={1:2,2:3,5:55}
+flag=True
+for i in a:
+    if len(a)!=len(b):
+        flag=False
+    if i not in b:
+        flag=False
+    if a[i]!=b[i]:
+        flag=False
+if flag:
+    print("same")
+else:
+    print("false")

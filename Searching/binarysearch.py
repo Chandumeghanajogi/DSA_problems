@@ -1,16 +1,26 @@
 def binary(num,target):
     low=0
-    high=len(num)-1
+    n=len(num)
+    high=n-1
     while low<=high:
         mid=(low+high)//2
         if num[mid]==target:
             return mid
-        elif target>mid:
+        elif target>num[mid]:
             low=mid+1
         else:
             high=mid-1
     return -1
 
-num=[10,20,30,40,50]
-target=40
-print(binary(num,40))
+
+    
+    return -1
+
+num=[3,4,6,7,9,12,16,17]
+target=6
+print(binary(num,6))
+# my dry run:
+# low=0
+# high=8
+# 0<=8  right
+# mid=0+8//2----4

@@ -1,0 +1,13 @@
+---my understanding of the python language---
+
+1. for i in reversed(range(n)):
+indirectly refers to the reverse arrangement without considering the the reverse[::-1]
+
+2.math.ceil  to consider the round up values
+import math
+num=10
+a=math.ceil(10)
+to get the round(9)
+
+3.round to consider the round down values...
+

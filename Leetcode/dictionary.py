@@ -27,3 +27,19 @@ def array(arr):
 
 nums=[1,3,0,0,0,4]
 print(array(nums))
+
+nums=[3, 1, 2, 4, 5]
+l=0
+r=len(nums)-1
+while l<r:
+    if nums[l]%2==1:
+        l+=1
+        continue
+    else:
+        nums[l],nums[r]=nums[r],nums[l]
+        r-=1
+        l+=1
+        
+print(nums)    
+
+    

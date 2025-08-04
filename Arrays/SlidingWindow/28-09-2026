@@ -1,0 +1,19 @@
+# Input: nums = [1, 4, 2, 10, 2, 3, 1, 0, 20], k = 4  
+# Output: 24  
+# Explanation: Subarray [10, 2, 3, 1] has the max sum = 16
+# here this is the fixed sliding window problem:
+
+nums = [1, 4, 2, 10, 2, 3, 1, 0, 20]
+k = 4
+temp=0
+l=0
+max1=0
+for r in range(len(nums)):
+    temp+=nums[r]
+
+    if r-l==k:
+        temp-=nums[l]
+        l+=1
+    if r-l+1==k:
+        max1=max(max1,temp)
+print(max1)
