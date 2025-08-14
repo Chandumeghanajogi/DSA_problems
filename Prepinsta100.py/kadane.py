@@ -1,11 +1,20 @@
-# def kadaneAlgorithmn(nums):
+def kadaneAlgorithmn(nums):
+    sum1=0
+    maxi=float("-inf")
+    for i in range(len(nums)):
+        sum1+=nums[i]
+        if sum1>maxi:
+            maxi=sum1
+        if sum1<0:
+            sum1=0
+    return maxi
 
 
 
-# nums=[]
 
-import math
-a=[5 ,10 ,20]
-b=math.lcm(5,10)
-print(math.gcd(b,15))
-# (math.gcd(final,15))
+
+
+
+
+nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+print(kadaneAlgorithmn(nums))
