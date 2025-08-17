@@ -1,58 +1,52 @@
-def chandu(nums):
-    mid=0
-    low=0
-    high=len(nums)-1
-    while mid<=high:
-        if nums[mid]==0:
-            nums[low],nums[mid]=nums[mid],nums[low]
-            low+=1
-            mid+=1
-        elif nums[mid]==1:
-            mid+=1
-        else:
-            nums[mid],nums[high]=nums[high],nums[mid]
-            high-=1
-    return nums
+# The code to check for the same repaeation of more elements :
+from collections import Counter
+arr = [1, 2, 1, 1, 3, 2, 2]
+acount=0
+bcount=0
+ele1=float("-inf")
+ele2=float("-inf")
+for i in range(len(arr)):
+    if acount==0 and ele2!=arr[i]:
+        ele1=arr[i]
+        acount+=1
+    elif bcount==0 and ele1!=arr[i]:
+        ele2=arr[i]
+        bcount+=1
+    elif ele1==arr[i]:
+        acount+=1
+    elif ele2==arr[i]:
+        bcount+=1
+    else:
+        acount-=1
+        bcount-=1
+print(ele1,ele2)
+acount2=0
+bcount2=0
+for i in range(len(arr)):
+    if arr[i]==ele1:
+        acount2+=1
+    else:
+        bcount2+=1
+mini=len(arr)//3
+if acount2>mini and bcount2>mini:
+    print([ele1,ele2])
 
-
+# To find out the single element
+count=0
+ele=None
+n=len(arr)
+for i in range(len(arr)):
+    if count==0:
+        count+=1
+        ele=arr[i]
+    elif ele==arr[i]:
+        count+=1
+    else:
+        count-=1
+count1=0
+for i in range(len(arr)):
+    if arr[i]==ele:
+        count1+=1
+if count1>n//2:
+    print(ele)
     
-
-
-
-nums=[0,0,1,1,2,2,2,2,1,0]
-print(chandu(nums))
-
-
-#this is the dutch national flag algorithmns
-
-# in addition to this we can use the count of ones,countof zeros and count og the twos
-
-
-# the kadane algorithmn:
-
-def kadane(nums):
-    sum1=0
-    min1=float("-inf")
-    for i in range(len(nums)):
-        sum1+=nums[i]
-        if sum1>min1:
-            min1=sum1
-            
-        if sum1<0:
-            sum1=0
-    return min1
-
-
-
-nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
-print(kadane(nums))
-
-dici={}
-for i in range(1,10):
-    dici[str(i)+"#"]=i
-print(dici)
-
-s= "10#11#12"
-res=""
-s1=s.split("#")
-print(s1)
