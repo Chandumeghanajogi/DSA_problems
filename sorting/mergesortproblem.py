@@ -63,6 +63,37 @@ print(merge(nums1,nums2,m,n))
   
 
 
+def merge(arr):
+    if len(arr)<=1:
+        return arr
+    mid=len(arr)//2
+    left=merge(arr[:mid])
+    right=merge(arr[mid:])
+    return mergesort(arr,left,right)
+
+def mergesort(arr,left,right):
+    i=0
+    j=0
+    k=[]
+    count=0
+    while i<len(left) and j<len(right):
+        if left[i]<=right[j]:
+            k.append(left[i])
+            i+=1
+        else:
+            k.append(right[j])
+            j+=1
+    while i<len(left):
+        k.append(left[i])
+        i+=1
+    while j<len(right):
+        k.append(right[j])
+        j+=1
+    return k
+
+
+arr=[3,22,1,444,76,88,22]
+print(merge(arr))
     
 
                 
