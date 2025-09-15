@@ -13,3 +13,29 @@ def balancingbrackets(s):
     return len(stack)==0
 s="{((){}]"
 print(balancingbrackets(s))
+
+def brackets20(ss):
+    stack=[]
+    for s in ss:
+        if s=="(" or s=="{" or s=="[":
+            stack.append(s)
+        else:
+            if not stack:
+                return False
+            else:
+                top=stack.pop()
+                if (s==")" and top=="(") or (s=="}" and top=="{" )or (s=="]" and top=="["): 
+                    continue
+                else:
+                    return False
+    if len(stack)==0:
+        return True
+    else:
+        return False
+        
+
+
+
+
+ss="[({}){}[]]"
+print(brackets20(ss))

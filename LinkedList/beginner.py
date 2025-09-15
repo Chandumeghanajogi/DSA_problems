@@ -133,6 +133,8 @@ for i in range((main-sub)+1):
 # class linked:
 #     def __init__(self):
 #         self.head=None
+
+
 #     def insertatbeg(self,data):
 #         new=node(data)
 #         new.next=self.head

@@ -1,0 +1,24 @@
+Binary Trees:
+
+the trees that have atmost 2 children .
+The maximum number of the nodes at the each level is the 2^levelnumber
+The Traversals in the trees:
+--- BFS
+---DFS-------->the inorder,the preorder,the postorder..
+
+
+BREADTH FIRST SEARCH:
+-->it is also known as the level order traversal
+--->traverses the tree level by level only.
+eg :
+ 1 2 3 4 5 6 7
+
+In the inoreder traversal we go to left--root--right  even we goto the left them too left ---root---right  if we go to right side also then too left--root--right only..
+
+The preOrder:
+
+root---left--right
+
+The PostOrder:
+
+left--right--root

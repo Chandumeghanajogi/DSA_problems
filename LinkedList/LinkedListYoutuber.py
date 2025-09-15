@@ -54,6 +54,7 @@ class linkedlist:
             fast=self.head
             for i in range(k):
                 fast=fast.next
+            print(fast.data)
             if fast==None:
                 self.head=self.head.next
                 return 
@@ -224,13 +225,22 @@ obj.insertatbegin(20)
 obj.insertatbegin(10)
 obj.insertatbegin(10)
 obj.removedup()
-obj.deletebeg()
-obj.deleteend()
+# obj.deletebeg()
+# obj.deleteend()
 # # obj.reverse()
 # obj.palin()
-# # obj.removenthnode(5)
+obj.removenthnode(3)
 # obj.rotatek(4)
 # obj.rotation(3)
 # obj.reve()
 # obj.addnumber(21,21)
 obj.display()
+
+
+
+#about the intresection of the two linkedlist:
+
+# def intersection(p1,p2):
+
+
+
