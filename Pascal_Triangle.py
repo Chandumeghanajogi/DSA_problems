@@ -60,9 +60,7 @@ for i in final:
         print(ele,end=" ")
     print()
 
-n=int(input())
-for i in range(n):
-    print("chandu")
+
 
 
 
